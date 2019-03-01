@@ -79,7 +79,7 @@
                 </a>
             <br />
             </div>
-        <div id="CategoryMenu" style="text-align": center">
+        <div id="CategoryMenu" style="text-align: center">
             <asp:ListView ID="categoryList"
                 ItemType="WingtipToys.Models.Category"
                 runat="server"
