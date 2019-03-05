@@ -175,7 +175,7 @@ namespace WingtipToys.Logic
         public void EmptyCart()
         {
             ShoppingCartId = GetCartId();
-            var cartItems = db.ShoppingCartItems.Where(cartItems => cartItems.CartId == ShoppingCartId);
+            var cartItems = _db.ShoppingCartItems.Where(c => c.CartId == ShoppingCartId);
             foreach (var cartItem in cartItems)
             {
                 _db.ShoppingCartItems.Remove(cartItem);
