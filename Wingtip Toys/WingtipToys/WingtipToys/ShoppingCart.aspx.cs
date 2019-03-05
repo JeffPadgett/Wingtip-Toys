@@ -45,7 +45,7 @@ namespace WingtipToys
         {
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
             {
-                String cartId = usersShoppingCart.GetCardId();
+                String cartId = usersShoppingCart.GetCartId();
 
                 ShoppingCartActions.ShoppingCartUpdates[] cartUpdates = new ShoppingCartActions.ShoppingCartUpdates[CartList.Rows.Count];
                 for (int i = 0; i < CartList.Rows.Count; i++)
@@ -62,7 +62,7 @@ namespace WingtipToys
                     quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQuantity");
                     cartUpdates[i].PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString());
                 }
-                usersShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates);
+                usersShoppingCart.UpdateShoppingCartDataBase(cartId, cartUpdates);
                 CartList.DataBind();
                 lblTotal.Text = String.Format("{0:c}", usersShoppingCart.GetTotal());
                 return usersShoppingCart.GetCartItems();

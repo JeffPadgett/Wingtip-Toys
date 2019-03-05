@@ -5,6 +5,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using WingtipToys.Models;
+using System.Linq;
+using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace WingtipToys.Account
 {
